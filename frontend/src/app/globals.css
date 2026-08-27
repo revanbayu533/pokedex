@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Pokédex brand colors */
+  --color-pokedex-gold: #cda434;
+  --color-pokedex-border: #3b82f6;
+  --color-pokedex-card: #ffffff;
+  --color-pokedex-nav-active: #fef3c7;
+  --color-pokedex-nav-active-border: #d4a017;
+
+  /* Pokémon type colors */
+  --color-type-normal: #A8A77A;
+  --color-type-fire: #EE8130;
+  --color-type-water: #6390F0;
+  --color-type-electric: #F7D02C;
+  --color-type-grass: #7AC74C;
+  --color-type-ice: #96D9D6;
+  --color-type-fighting: #C22E28;
+  --color-type-poison: #A33EA1;
+  --color-type-ground: #E2BF65;
+  --color-type-flying: #A98FF3;
+  --color-type-psychic: #F95587;
+  --color-type-bug: #A6B91A;
+  --color-type-rock: #B6A136;
+  --color-type-ghost: #735797;
+  --color-type-dragon: #6F35FC;
+  --color-type-dark: #705746;
+  --color-type-steel: #B7B7CE;
+  --color-type-fairy: #D685AD;
+
+  /* Catch page animations */
+  --animate-pokeball-throw: pokeballThrow 1.4s ease-in-out;
+  --animate-catch-pop: catchPop 0.5s ease-out;
+  --animate-escape-shake: escapeShake 0.5s ease-in-out;
+  --animate-bounce-slow: bounceSlow 1.4s ease-in-out infinite;
+}
+
+@keyframes pokeballThrow {
+  0% { transform: translateY(0) rotate(0deg); }
+  30% { transform: translateY(-40px) rotate(180deg); }
+  60% { transform: translateY(0) rotate(360deg); }
+  75% { transform: translateY(0) rotate(380deg); }
+  85% { transform: translateY(0) rotate(340deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+@keyframes catchPop {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes escapeShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
