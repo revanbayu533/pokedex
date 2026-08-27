@@ -15,7 +15,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "https://pokedex-production-e1c7.up.railway.app/api/:path*",
+        destination: "https://pokedex-pink-omega-68.vercel.app/api/:path*",
       },
     ];
   },
